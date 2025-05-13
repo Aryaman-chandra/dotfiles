@@ -1,0 +1,20 @@
+vim.g.mapleader = " "
+
+--Keybinding to moves lines when in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+--Greatest Keymap ever deletes the content in register then pastes it
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+--Next greatest keymap stores the content in your system clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set("n" , "<C-k>" , ":wincmd k<CR>")
+vim.keymap.set("n" , "<C-j>" , ":wincmd j<CR>")
+vim.keymap.set("n" , "<C-h>" , ":wincmd h<CR>")
+vim.keymap.set("n" , "<C-l>" , ":wincmd l<CR>")
+
+vim.keymap.set('n', '<leader>t' , ':NvimTreeToggle<CR>',{})
+vim.keymap.set('n', '<leader>bfn' , ':bnext<CR>')
+vim.keymap.set('n', '<leader>bfp' , ':bprev<CR>')
